@@ -31,21 +31,14 @@ h4 {
   line-height: 1.6em;
   margin-bottom: 1.6em;
 }
-p, ul, blockquote, pre, td, th, label {
+p, ul, blockquote, td, pre, th, label {
   margin: 0;
   font-size: 1em;
   line-height: 1.8461538461538463em;
   margin-bottom: 1.8461538461538463em;
 }
 
-code {
-  font-size: 12px;
-  margin: 20px 0 20px 0;
-  padding: 6px;
-  display: block;
-  -webkit-border-radius: 6px;
-  background: #000;
-  color: #fff;
+pre{
   font-family: "Bitstream Vera Sans Mono";
 }
 
@@ -64,8 +57,8 @@ code {
   padding-right: 9px;
   }
 
-#content {
-  /* background: url("../img/gridbg.gif");*/
+#content, .entry {
+   background: url("/css/gridbg.gif");
 }
 
 #footer {
