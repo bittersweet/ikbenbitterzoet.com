@@ -1,0 +1,138 @@
+body {
+  font-family: "Lucida Sans", "Lucida Grande", sans-serif;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.8461538461538463em;
+  margin: 0;
+  padding: 0
+}
+h1 {
+  color: #000;
+  margin: 0;
+  font-size: 1.6153846153846154em;
+  line-height: 1.1428571428571428em;
+  margin-bottom: 1.1428571428571428em;
+}
+h2 {
+  margin: 0;
+  font-size: 1.4615384615384615em;
+  line-height: 1.263157894736842em;
+  margin-bottom: 1.263157894736842em;
+}
+h3 {
+  margin: 0;
+  font-size: 1.3076923076923077em;
+  line-height: 1.411764705882353em;
+  margin-bottom: 1.411764705882353em;
+}
+h4 {
+  margin: 0;
+  font-size: 1.1538461538461537em;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
+}
+p, ul, blockquote, pre, td, th, label {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.8461538461538463em;
+  margin-bottom: 1.8461538461538463em;
+}
+
+code {
+  font-size: 12px;
+  margin: 20px 0 20px 0;
+  padding: 6px;
+  display: block;
+  -webkit-border-radius: 6px;
+  background: #000;
+  color: #fff;
+  font-family: "Bitstream Vera Sans Mono";
+}
+
+.meta h3 {
+  font-weight: light;
+  color: rgb(119, 119, 119);
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 2.4em;
+}
+
+.artikel-meta {
+  font-size: 12px;
+  text-align: right;
+  margin-left: -9px;
+  padding-right: 9px;
+  }
+
+#content {
+  /* background: url("../img/gridbg.gif");*/
+}
+
+#footer {
+  margin-top: 100px;
+  /* background: url("../img/gridbg.gif");*/
+}
+
+#header {
+
+}
+
+#header #logo {
+  padding-top: 35px;
+}
+
+#menu ul {
+  list-style: none;
+  font-size: 12px;
+}
+
+#menu ul li {
+  display: block;
+  height: 50px;
+  padding: 50px 12px 7px 12px;
+  float: left;
+}
+
+#menu ul li+li {
+  margin-left: 5px;
+}
+
+#menu li a {
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#menu ul li.active {
+  background: #FFC700;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+a:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+#sidebar {
+  display: inline;
+  float: left;
+}
+
+ul#artikelen .artikel-titel {
+  font-weight: bold;
+  color: #000;
+}
+
+#footer a{
+  color: #333;
+}

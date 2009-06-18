@@ -13,10 +13,9 @@ post = File.new("_posts/#{file_date}-#{file_title}.textile", "w+")
 post.puts "---
 layout: post
 title: #{title}
+intro: 
 ---
 
 h1. {{ page.title }}
-
-p(meta). #{post_date} - Amsterdam
 
 "

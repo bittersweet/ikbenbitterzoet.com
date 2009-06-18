@@ -1,4 +1,88 @@
----
-layout: default
----
-{{ content }}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>ik ben Bitterzoet</title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/960.css" type="text/css">
+    <link rel="stylesheet" href="/css/screen.css" type="text/css">
+  </head>
+  
+  <body>
+  
+  <div id="header" class="container_12">
+    
+    <div id="logo" class="grid_5">
+      
+      <a href="/"><img src="/css/bz_logo.png" /></a>
+      
+    </div>
+    
+    <div id="menu" class="grid_7 omega">
+      
+      <ul>
+        <li class="active"><a href="#">home</a></li>
+        <li><a href="weblog.html">weblog</a></li>
+        <li><a href="#">code</a></li>
+        <li><a href="#">work</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+      
+    </div>
+    
+  </div><div class="clear"></div>
+  
+  <div id="content" class="container_12">
+    
+    <div class="grid_10">
+  
+      <div class="meta grid_3 alpha">
+      
+        <h4>{{ page.date | date_to_string }}</h4>
+      
+      </div>
+    
+      <div class="entry grid_6 omega">
+    
+        {{ content }}
+    
+      </div>
+
+    </div>
+    
+    <div id="sidebar" class="grid_2">
+      
+      <div id="about">
+      
+        <h4>About</h4>
+        <p>Geschreven door Mark Mulder, een webdeveloper en programmeur uit Amsterdam die de liefde heeft verklaard aan Ruby (on Rails).</p>
+      </div>
+      
+    </div>
+    
+    </div><div class="clear"></div>
+        
+    <div id="footer" class="container_12">
+
+      <div class="grid_3">
+        <h4>Find me</h4>
+        <ul>
+          <li><a href="http://twitter.com/bitterzoet">Twitter</a></li>
+          <li><a href="http://www.github.com/bittersweet">GitHub</a></li>
+          <li><a href="http://www.flickr.com/photos/denachtdienst/">Flickr</a></li>
+          <li><a href="http://bitterandsweet.hyves.nl">Hyves</a></li>
+        </ul>
+      </div>
+
+      <div class="grid_4">
+        <h4>Recente artikelen</h4>
+        <ul>
+          <li><a href="http://twitter.com/bitterzoet">Twitter</a></li>
+          <li><a href="http://www.github.com/bittersweet">GitHub</a></li>
+          <li><a href="http://www.flickr.com/photos/denachtdienst/">Flickr</a></li>
+        </ul>
+      </div>  
+
+    </div>
+
+
+</html>
