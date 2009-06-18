@@ -58,7 +58,7 @@ pre{
   }
 
 #content, .entry {
-   background: url("/css/gridbg.gif");
+/*   background: url("/css/gridbg.gif");*/
 }
 
 #footer {
@@ -66,12 +66,12 @@ pre{
   /* background: url("../img/gridbg.gif");*/
 }
 
-#header {
-
-}
-
 #header #logo {
   padding-top: 35px;
+}
+
+#logo a:hover{
+  border: none;
 }
 
 #menu ul {

@@ -26,4 +26,6 @@ end
 
 Dit was een pre block.
 
-Dit si een volgende paragraaf.
+> dit is een blockquote je weet zellef
+
+dit is `gewone code je weet het toch`
