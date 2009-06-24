@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with Jekyll
+published: false
 intro: Hoe maak je een site met behulp van Jekyll de static site generator.
 ---
 
