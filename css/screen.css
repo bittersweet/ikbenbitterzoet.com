@@ -38,7 +38,7 @@ p, ul, blockquote, td, pre, th, label {
   margin-bottom: 1.8461538461538463em;
 }
 
-pre{
+pre {
   font-family: "Bitstream Vera Sans Mono";
 }
 
@@ -55,22 +55,17 @@ pre{
   text-align: right;
   margin-left: -9px;
   padding-right: 9px;
-  }
-
-#content, .entry {
-/*   background: url("/css/gridbg.gif");*/
 }
 
 #footer {
   margin-top: 100px;
-  /* background: url("../img/gridbg.gif");*/
 }
 
 #header #logo {
   padding-top: 35px;
 }
 
-#logo a:hover{
+#logo a:hover {
   border: none;
 }
 
@@ -110,6 +105,15 @@ a {
   color: #000;
 }
 
+.entry a {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.entry a:hover {
+  color: #333;
+  border-bottom: none;
+}
 
 a:hover {
   color: #000;
