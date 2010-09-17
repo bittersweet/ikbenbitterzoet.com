@@ -2,35 +2,18 @@
 layout: default
 title: home
 ---
-
-    <ul>
-      <li class="active"><a href="/">home</a></li>
-      <li><a href="/weblog.html">weblog</a></li>
-      <li><a href="/code.html">code</a></li>
-      <li><a href="/work.html">work</a></li>
-      <li><a href="/contact.html">contact</a></li>
-    </ul>
-    
-  </div>
-  
-</div><div class="clear"></div>
-
 <div id="content" class="container_12">
-  
+
   <div class="grid_10">
 
     {% for post in site.posts %}
     <div class="meta grid_3 alpha">
-  
       <h4>{{ post.date | date_to_string }}</h4>
-  
     </div>
 
     <div class="grid_6 omega">
-
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <p>{{ post.intro }}</p>
-
     </div>
     {% endfor %}
-                       
+
