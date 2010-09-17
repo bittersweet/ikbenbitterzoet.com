@@ -1,91 +1,90 @@
+/* Baseline
+ * Base font 16
+ * Line Height 28.8
+ */
+
 body {
   font-family: "Lucida Sans", "Lucida Grande", sans-serif;
   color: #333;
-  font-size: 13px;
-  line-height: 1.8461538461538463em;
-  margin: 0;
-  padding: 0
-}
-h1 {
-  color: #000;
-  margin: 0;
-  font-size: 1.6153846153846154em;
-  line-height: 1.1428571428571428em;
-  margin-bottom: 1.1428571428571428em;
-}
-h2 {
-  margin: 0;
-  font-size: 1.4615384615384615em;
-  line-height: 1.263157894736842em;
-  margin-bottom: 1.263157894736842em;
-}
-h3 {
-  margin: 0;
-  font-size: 1.3076923076923077em;
-  line-height: 1.411764705882353em;
-  margin-bottom: 1.411764705882353em;
-}
-h4 {
-  margin: 0;
-  font-size: 1.1538461538461537em;
-  line-height: 1.6em;
-  margin-bottom: 1.6em;
-}
-p, ul, blockquote, td, pre, th, label {
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.8461538461538463em;
-  margin-bottom: 1.8461538461538463em;
+	font-size: 16px;
+	line-height: 1.75em;
+	margin: 0; padding: 0
 }
 
-pre {
-  font-family: "Bitstream Vera Sans Mono";
+h1 {
+	margin: 0;
+	font-size: 1.5em;
+	line-height: 1.1666666666666667em;
+	margin-bottom: 1.1666666666666667em;
+}
+
+h2 {
+	margin: 0;
+	font-size: 1.375em;
+	line-height: 1.2727272727272727em;
+	margin-bottom: 1.2727272727272727em;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.25em;
+	line-height: 1.4em;
+	margin-bottom: 1.4em;
+}
+
+h4 {
+	margin: 0;
+	font-size: 1.125em;
+	line-height: 1.5555555555555556em;
+	margin-bottom: 1.5555555555555556em;
+}
+
+p, ul, blockquote, pre, td, th, label {
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.75em;
+	margin-bottom: 1.75em;
+}
+
+p.small {
+	margin: 0;
+	font-size: 0.875em;
+	line-height: 2em;
+	margin-bottom: 2em;
 }
 
 a {
+  color: #000;
   text-decoration: none;
-  color: #000;
-}
-
-.entry a {
-  color: #000;
   border-bottom: 1px solid #000;
 }
 
-.entry a:hover {
+a:hover {
   color: #333;
   border-bottom: none;
 }
 
-a:hover {
-  color: #000;
-  border-bottom: 1px solid #000;
-}
-
 code,pre
 {
-  font-family:"Monaco", "Courier New", monospace;
-  font-size: 12px;
-  line-height: 150%;
+  font-family: "Menlo", "Bitstream Vera Sans Mono", "Monaco", "Courier New", monospace;
+  /* font-size: 12px; */
+  /* line-height: 150%; */
 }
 
 pre
 {
-  -moz-border-radius:5px;
-  -moz-box-shadow:0 -1px 0 #444;
-  -webkit-border-radius:5px;
-  -webkit-box-shadow:0 -1px 0 #444;
-  background-color:#222;
-  color:#fff;
-  font-size: 13px;
-  padding: 20px;
-  text-shadow:0 1px 0 #000;
+  /* -moz-border-radius: 5px; */
+  /* -moz-box-shadow: 0 -1px 0 #444; */
+  /* -webkit-border-radius: 5px; */
+  /* -webkit-box-shadow: 0 -1px 0 #444; */
+  /* background-color: #222; */
+  /* color:#fff; */
+  /* padding: 20px; */
+  /* text-shadow: 0 1px 0 #000; */
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-  width: 490px;
-  margin: 0px 0px 0px -40px;
 }
 
