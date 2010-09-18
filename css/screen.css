@@ -88,6 +88,14 @@ pre
   word-wrap: break-word;
 }
 
+ul{
+  list-style-type: circle;
+}
+
+ul li{
+  margin-left: 20px;
+}
+
 #footer{
   height: 200px;
   text-align: center;
