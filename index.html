@@ -2,18 +2,23 @@
 layout: default
 title: home
 ---
-<div id="content" class="container_12">
-
-  <div class="grid_10">
-
+<div id="container" class="container_12">
+  <div id="content" class="grid_6">
     {% for post in site.posts %}
-    <div class="meta grid_3 alpha">
-      <h4>{{ post.date | date_to_string }}</h4>
-    </div>
-
-    <div class="grid_6 omega">
+    <div>
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <h4>{{ post.date | date_to_string }}</h4>
       <p>{{ post.intro }}</p>
     </div>
     {% endfor %}
+  </div>
+
+  <div class="clear"></div>
+  <div id="footer" class="grid_6">
+    Copyright &copy; 2010 by Mark Mulder<br>
+    <a href="http://twitter.com/bitterzoet">Twitter</a>
+    <a href="http://github.com/bittersweet">GitHub</a>
+    <a href="mailto:markmulder@gmail.com">E-Mail</a>
+  </div>
+</div>
 
