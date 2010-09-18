@@ -4,28 +4,34 @@ title: Multiple file upload with PLupload
 intro: How to get multiple file uploading working with PLupload and Rails 3
 ---
 
-Plupload is gathering steam lately and I had a need for a easy multiple file
+[Plupload][] is gathering steam lately and I had a need for a easy multiple file
 upload solution so I gave it a go.  In this article I'll first get file uploads
 up and running with Rails 3 and Carrierwave, all via Mongoid. You can skip to
-the good parts if you've already taken care of that though.
+the last part if you've already taken care of that though.
 
 A small note, this is just a quick runthrough how to get up and running, it's
 not the perfect and cleanest way to do fileuploads, as there is no gracefull
 degredation for example. It's meant to give you a headstart, something for you
 to get going on.
 
+If you're already have file uploading working in your app you can skip over to
+the Plupload section of this article, otherwise read on for a quick setup of
+a fresh Rails 3 app with Mongoid and Carrierwave.
+
+[plupload]: http://plupload.com/
+
 ### Mongoid and Carrierwave
 
 First lets generate a new Rails 3 app, without Active Record and Prototype.
 
 {% highlight bash %}
-rails new rails3upload -OJ
+rails new plupload-example -OJ
 {% endhighlight %}
 
 Update the gemfile to include `mongoid`, `bson_ext`, `carrierwave` and
-`mini_magick`. Don't forget to `bundle install` afterwards. I'm using
-Carrierwave from it's source on Github as the latest gem isn't compatible with
-Rails 3 just yet.
+`mini_magick`. Don't forget to `bundle install` afterwards. I'm building
+Carrierwave directly from Github as the latest gem isn't compatible with Rails
+3 just yet.
 
 {% highlight ruby %}
 gem 'mongoid', '>= 2.0.0.beta.17'
@@ -56,12 +62,21 @@ necessary.
 Carrierwave has it's own way of doing uploads if you compare it with Paperclip
 for example, it defines an upload class in `app/uploaders`. I kind of like this
 approach as the logic is extracted from the controller and looks cleaner to me.
-Of course there is an associated generator for this, afterwards you will
-probably have to restart your server or you'll get not defined messages.
-__(exacte error??)__
+Of course there is an associated generator for this:
 
 {% highlight bash %}
 rails g uploader Asset
+{% endhighlight %}
+
+Now we can mount this uploader in our model, so update it accordingly.
+
+{% highlight ruby %}
+class Asset
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  mount_uploader :asset, AssetUploader
+end
 {% endhighlight %}
 
 Take a look at the settings in `app/uploaders/asset.rb`, the defaults are of
@@ -142,16 +157,14 @@ $(function(){
 </script>
 {% endhighlight %}
 
-All that's left is to set up the controller. Rails is expecting an `asset`
-param that contains the file, but I haven't found a way yet to change
-Plupload's default behaviour in sending it via a `file` param. A quick
-fix is to change it in the controller but obviously I'd love to be able to
-change it so it looks cleaner.
+Almost there! Rails is looking for a `asset` key in the params hash but
+unfortunately plpuload puts the uploaded file in the `file` key. I haven't
+found a way to change the default behaviour yet. A quick fix is to modify the
+controller but obviously I'd love to be able to change it.
 
 {% highlight ruby %}
 def create
   @asset = Asset.new(:asset => params[:file])
-
   if @asset.save
     head 200
   else
@@ -160,7 +173,19 @@ def create
 end
 {% endhighlight %}
 
-If you need to send a long extra data with the fileupload you can use the
-multipart_params hash and get form values via jQuery for example.
+All you need know is a quick image tag to display your images.
 
-__example__
+{% highlight ruby %}
+<%= image_tag @asset.asset.url(:thumb) %>
+{% endhighlight %}
+
+So there you have it, a pretty barebones way of getting up and running with
+Plupload. There is a lot of stuff you could add:
+
+* an upload queue for managing files to be uploaded
+* showing a preview if you're uploading images
+* drag and drop files
+
+To be honest I found the 'documentation' quite lacking but the examples are
+alright. If you are going to use Plupload to do something a lot fancier then
+this article you will have to dive in deep with the sourcecode and examples.
