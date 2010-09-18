@@ -189,3 +189,11 @@ Plupload. There is a lot of stuff you could add:
 To be honest I found the 'documentation' quite lacking but the examples are
 alright. If you are going to use Plupload to do something a lot fancier then
 this article you will have to dive in deep with the sourcecode and examples.
+
+### Sourcecode
+
+I've uploaded the example app I created while writing this article to this
+[Github repo][]. The commits are ordered just like here, so you can read along
+with those.
+
+[Github repo]: http://github.com/bittersweet/plupload-example
