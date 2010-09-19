@@ -1,17 +1,18 @@
 ---
 layout: post
-title: learning vim
+title: Learning Vim
 intro: A few tips to get good at using Vim
 ---
 
 ### Introduction
 
-There's been an amazing response on HackerNews and the programming Reddit on 
+There's been an amazing response on HackerNews and the programming Reddit on
 the recent articles from [Jeff](http://jeffkreeftmeijer.com/2010/stumbling-into-vim/)
-and [Vincent](http://nvie.com/posts/how-i-boosted-my-vim/), people were 
-learning a lot from them so that motivated me to write my own version. My 
-philosophy about Vim is that you never stop learning and reading about other 
-people's experiences and tricks with Vim is the best way to learn.
+and [Vincent](http://nvie.com/posts/how-i-boosted-my-vim/), people were
+learning a lot from them so that motivated me to write my own version.
+
+In my opinion you never stop learning Vim and reading about other people's
+experiences and tricks is one of the best ways to keep learning.
 
 A lot of the basic things were already covered by the previous mentioned
 articles so I wanted to do it a bit differently. Instead of a just a list with
@@ -20,29 +21,36 @@ hopefully make you a better Vim user.
 
 ### Recognize patterns
 
-In my experience it doesn't take long before you can get up and running with 
-Vim and be able to edit files. You're probably not as productive as you were 
-before and keep grabbing that pesky mouse but don't worry, you took the first 
-step. It's all a learning process from here. That is also one of the great 
-things about choosing to 'learn' an editor, it's always great to look back and 
+In my experience it doesn't take long before you can get up and running with
+Vim and be able to edit files. You're probably not as productive as you were
+before and keep grabbing that pesky mouse but don't worry, you took the first
+step. It's all a learning process from here. That is also one of the great
+things about choosing to 'learn' an editor, it's always great to look back and
 see how much you've learned!
 
-One of the best tips I can give about using Vim efficiently is also applicable 
-to other areas in programming and using a computer in general. __Learn to 
-recognize patterns.__ In Vim there's almost __always__ a better and faster way 
+One of the best tips I can give about using Vim efficiently is also applicable
+to other areas in programming and using a computer in general. __Learn to
+recognize patterns.__ In Vim there's almost __always__ a better and faster way
 to do things, with or without plugins.
 
-For example, a novice Vim user will probably delete words by keep hitting the 
-`x` key, this is a moment you need to stop and think about how you can do this 
+For example, a novice Vim user will probably delete words by keep hitting the
+`x` key, this is a moment you need to stop and think about how you can do this
 better, or the _Vim way_.
-Naturally you'll soon come across the `w` motion for words, and learn to combine
-it with another motion to form `dw` to delete whole words.
+Naturally you'll soon come across the `w` motion for words, and learn to
+combine it with `d` for delete or `c` for change to form `dw` or `cw` to delete
+or change whole words.
 
-Something I used to do was use visual line mode to select lines of code, or 
-def/end blocks in Ruby to delete a whole method for example. That's when I 
-looked around and learned about paragraphs. The def and end blocks in Ruby 
-form a perfect example for this. Instead of going into visual mode and 
-scrolling down or up to select a block you can use motion commands tied to 
+You can keep building on that same idea about combining motions and even
+incorporate Vim `objects` into the mix. For example you can delete everything
+inside a tag block with `dit` or use `ci"` to change everything wrapped inside
+double quotes.  Now you'll begin to truly see the capabilities of Vim and how
+it can help you be more productive.
+
+Something I used to do was use visual line mode to select lines of code, or
+def/end blocks in Ruby to delete a whole method for example. That's when I
+looked around and learned about paragraphs. The def and end blocks in Ruby
+form a perfect example for this. Instead of going into visual mode and
+scrolling down or up to select a block you can use motion commands tied to
 paragraphs to do this faster and with less keystrokes.
 
 Try using `vip` or `v}` at the beginning of a block to select it all in one go.
@@ -53,9 +61,9 @@ to automatically reformat a block of text.
 
 ### Customize!
 
-You can do a lot with a default build of Vim, but in my opinion if you take 
-some time to customize your Vim a bit you will feel greater pleasure of working 
-with it. There's something to be said for just using a default version, so you 
+You can do a lot with a default build of Vim, but in my opinion if you take
+some time to customize your Vim a bit you will feel greater pleasure of working
+with it. There's something to be said for just using a default version, so you
 can find your way on whatever system you are, but in my case the customizations
 aren't that severe that I can't work on a default setup at all, I would just be
 a bit less efficient.
@@ -121,12 +129,12 @@ works with splits and tabs as well so just add `R` or `T` after it.
 
 ### Read the help
 
-If you're customizing your Vim you're probably using some plugins as well. In 
-my first few months of using Vim I was just using them out of the box, not 
-really tapping into their full potential. For example I was using NERDTree to 
-open files. Because I love using different tabs for files I was always opening 
-a new tab, toggling NERDTree again and find myself having to traverse the whole 
-directory structure again. I was actually doing the same thing with Command-T. 
+If you're customizing your Vim you're probably using some plugins as well. In
+my first few months of using Vim I was just using them out of the box, not
+really tapping into their full potential. For example I was using NERDTree to
+open files. Because I love using different tabs for files I was always opening
+a new tab, toggling NERDTree again and find myself having to traverse the whole
+directory structure again. I was actually doing the same thing with Command-T.
 
 After a while I decided to read the help documentation for these plugins, which
 was something I should have done a lot earlier! Turns out you can use `i` to
@@ -138,8 +146,8 @@ doesn't automatically add new files to the file overview. A quick glance at the
 help documentation and I learned to use `r` and `R` to recursively refresh the
 current directory or the current root.
 
-All the plugins you are using probably work fine but if you take the effort of 
-going through the help files I will bet there's loads of functionality you 
+All the plugins you are using probably work fine but if you take the effort of
+going through the help files I will bet there's loads of functionality you
 weren't aware of yet!
 
 ##### Pathogen
