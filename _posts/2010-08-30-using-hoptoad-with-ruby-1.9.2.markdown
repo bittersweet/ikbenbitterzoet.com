@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Using Hoptoad with Ruby 1.9.2
-intro: How to get hoptoad_notifier to work in Ruby 1.9.2
 ---
 
 The hoptoad_notifier gem is not updated to work with Ruby 1.9.2 yet, the

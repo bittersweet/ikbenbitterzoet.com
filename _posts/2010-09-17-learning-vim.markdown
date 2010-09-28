@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Learning Vim
-intro: A few tips to get good at using Vim
 ---
 
 ### Introduction

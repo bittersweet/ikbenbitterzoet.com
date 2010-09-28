@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Multiple file upload with PLupload
-intro: How to get multiple file uploading working with PLupload and Rails 3
 ---
 
 [Plupload][] is gathering steam lately and I had a need for a easy multiple file
