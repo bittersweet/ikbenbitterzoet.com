@@ -6,7 +6,7 @@ title: Using responders to clean up your controllers
 Rails 3 ships with a feature called [Responders][], you might be already using
 it to render different formats in your controllers. In this article I'll be
 talking about the [Responders gem][] by José Valim that spawned this feature.
-It really allows you to dry up your controllers and remove boilerplate code.
+It really allows you to DRY up your controllers and remove boilerplate code.
 
 [Responders]: http://railsapi.com/doc/rails-v3.0.0/classes/ActionController/Responder.html
 [Responders gem]: http://github.com/plataformatec/responders
@@ -24,16 +24,17 @@ def create
 end
 {% endhighlight %}
 
-We can use the Responder gem by José to refactor this and DRY it up a bit. It
-comes packed with a few responders to help you on your way, the ones I'm
-interested in are the [flash][] and [collection][] responders.
+We will use the Responder gem to refactor this and DRY it up a bit. It comes
+packed with a few responders to help you on your way, the ones I'm interested
+in are the [flash][] and [collection][] responders.
 
 [flash]: http://github.com/plataformatec/responders/blob/master/lib/responders/flash_responder.rb
 [collection]: http://github.com/plataformatec/responders/blob/master/lib/responders/collection_responder.rb
 
-The flash responder helps you with setting flash messages, what's great about
-it is that it allows you to define them in a very DRY-like manner via a locale
-file that your controller will use to generate the flash message.
+It will be no surprise that the first responder helps you with setting flash
+messages. What's great about it is that it allows you to define them in a very
+DRY-like manner via a locale file that the responder will use to generate the
+flash message.
 
 The default looks like this and almost suits my needs perfectly, I like to
 change `destroy` into `deleted`.
@@ -50,9 +51,9 @@ change `destroy` into `deleted`.
         alert: "%{resource_name} could not be destroyed."
 {% endhighlight %}
 
-The collection responder makes sure that __create__ and __update__ actions
-will redirect to the collection rather then the resource itself. I like this
-behaviour for Admin controllers, where I just want to create a resource and
+The collection responder makes sure that __create__ and __update__ actions will
+redirect to the collection rather then the resource itself. I like this
+behaviour for admin controllers, where I just want to create a resource and
 continue instead of being redirected to the resource in question.
 
 A related sidenote: José was very approachable when I wanted to make a custom
